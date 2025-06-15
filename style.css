@@ -1,0 +1,49 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #222;
+  overflow: hidden;
+}
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  cursor: crosshair;
+}
+#crosshair {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin-left: -16px;
+  margin-top: -16px;
+  pointer-events: none;
+  z-index: 10;
+}
+#crosshair::before, #crosshair::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+}
+#crosshair::before {
+  left: 15px; top: 0; width: 2px; height: 32px;
+}
+#crosshair::after {
+  top: 15px; left: 0; width: 32px; height: 2px;
+}
+#instructions {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2em;
+  background: rgba(0,0,0,0.7);
+  padding: 1em 2em;
+  border-radius: 10px;
+  z-index: 20;
+  text-align: center;
+}
